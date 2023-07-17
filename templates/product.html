@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Zine{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+    <h3>Awesome zine #1</h3>
+    <img src="{{url_for('static', filename='goodtime.jpg')}}" class = "image"/>
+    <button type="button">Buy Now</button>
+    <p> This is an awesome zine for you to buy <br>
+        Price is 10000 dolla <br>
+        Trust me it's worth it
+    </p>>
+{% endblock %}
