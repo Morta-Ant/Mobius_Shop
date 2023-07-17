@@ -1,0 +1,8 @@
+[
+    {"name":"item1", "price": 0.01, "category":"cat1", "desc":"item description", "images":["image1a.png", "image1b.png"], "stock":1},
+    {"name":"item2", "price": 0.01, "category":"cat1", "desc":"item description", "images":["image2a.png", "image2b.png"], "stock":1},
+    {"name":"item3", "price": 0.01, "category":"cat2", "desc":"item description", "images":["image3a.png", "image3b.png"], "stock":1},
+    {"name":"item4", "price": 0.01, "category":"cat2", "desc":"item description", "images":["image4a.png", "image4b.png"], "stock":1},
+    {"name":"item5", "price": 0.01, "category":"cat3", "desc":"item description", "images":["image5a.png", "image5b.png"], "stock":1},
+    {"name":"item6", "price": 0.01, "category":"cat3", "desc":"item description", "images":["image6a.png", "image6b.png"], "stock":1}
+]
