@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{cat}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+{% for item in cat_items %}
+<div>
+    <img src="{{url_for('static', filename= item['images'][0])}}" class = "image"/>  
+<p>{{item["name"]}} {{item["price"]}}<br>
+</p>
+</div>
+{% endfor %}
+{% endblock %}
