@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
     {% block head %}
     <title>Mobius shop {% block title %}{% endblock %}</title>
     {% endblock %}
@@ -16,28 +20,51 @@
 
     .sidebar {
       height: 100%;
-      width: 160px;
+      width: 180px;
       position: fixed;
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #a9a9a9;
+      background-color: #dadada;
       overflow-x: hidden;
       padding-top: 20px;
+      font-family: 'Roboto Mono', monospace;
     }
 
     .content {
-      margin-left: 160px; 
+      margin-left: 180px; 
       font-size: 28px; 
       padding: 0px 10px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: medium;
     }
 
+    .logo {
+      margin-left: 15px;
+      width: 150px;
+    }
+
+    a:link {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(44, 44, 44);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      background-color: yellow;
+    }
+    
     </style>
 
     {% block style %}{% endblock %}
 
     <div class = "sidebar">
-      <img src="{{url_for('static', filename = 'logo.png')}}" width="150" height="150">
+      <img src="{{url_for('static', filename = 'logo.png')}}" class = "logo">
       {{nav.top.render()}}
     </div>
 

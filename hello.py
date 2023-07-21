@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_nav import Nav
 from flask_nav.elements import Navbar, View, Subgroup
 import json
+import fancybox
 
 app = Flask(__name__)
 
