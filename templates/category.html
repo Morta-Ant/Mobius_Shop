@@ -3,13 +3,26 @@
 {% block head %}
   {{ super() }}
 {% endblock %}
+
+{% block style %}
+<style>
+.grid-container {
+  display: grid;
+  grid: 400px / auto auto auto;
+}
+
+</style>
+{% endblock %}
+
 {% block content %}
 
-{% for item in cat_items %}
-<div>
-    <img src="{{url_for('static', filename= item['images'][0])}}" class = "image"/>  
-<p>{{item["name"]}} {{item["price"]}}<br>
-</p>
-</div>
-{% endfor %}
+  <div class="grid-container">
+    {% for item in cat_items %}
+    <div class = "grid-item">
+      <img src="{{url_for('static', filename= item['images'][0])}}" width="250" height="250" class = "image"/>
+      <p> <a href="/product/{{item['id']}}"> {{item["name"]}}</a>  £{{item["price"]}} </p>
+    </div>
+    {% endfor %}
+  </div>
+
 {% endblock %}

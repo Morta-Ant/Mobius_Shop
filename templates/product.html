@@ -3,15 +3,24 @@
 {% block head %}
   {{ super() }}
 {% endblock %}
+
 {% block content %}
     <h3>{{name}}</h3>
-    <img src="{{url_for('static', filename = images[0]) }}" class = "image"/>
-    <img src="{{url_for('static', filename = images[1]) }}" class = "image"/>
-    <p>
-      {{price}}
-    </p>
-    <button type="button">Buy</button>
-    <p> 
-      {{desc}}
-    </p>>
+ 
+     <p> 
+       {{desc}} <br>
+     </p>>
+
+     <p>
+      £ {{price}} 
+     </p>
+ 
+     <button type="button">Buy</button>
+    
+    <div>
+      {% for image in images %}
+      <img src="{{url_for('static', filename = image) }}" width="550" height="550" class = "image"/>
+      {% endfor %}  
+    </div>
+    
 {% endblock %}

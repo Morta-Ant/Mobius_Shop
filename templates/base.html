@@ -1,13 +1,49 @@
 <!doctype html>
 <html>
   <head>
-    {{nav.top.render()}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     {% block head %}
     <title>Mobius shop {% block title %}{% endblock %}</title>
     {% endblock %}
   </head>
+
   <body>
-    <div id="content">{% block content %}{% endblock %}</div>
+
+    <style>
+
+    .sidebar {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #a9a9a9;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .content {
+      margin-left: 160px; 
+      font-size: 28px; 
+      padding: 0px 10px;
+    }
+
+    </style>
+
+    {% block style %}{% endblock %}
+
+    <div class = "sidebar">
+      <img src="{{url_for('static', filename = 'logo.png')}}" width="150" height="150">
+      {{nav.top.render()}}
+    </div>
+
+
+    <div class="content">{% block content %}{% endblock %}</div>
+
     <div id="footer">
       {% block footer %}
       {% endblock %}

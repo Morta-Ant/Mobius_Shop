@@ -9,9 +9,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/product/<name>")
-def product(name):
-    item_data = get_item_from_data(name, data)
+@app.route("/product/<id>")
+def product(id):
+    item_data = get_item_from_data(id, data)
     return render_template("product.html", 
                            **item_data
                            )
@@ -30,7 +30,7 @@ def about():
     return render_template("about.html")
 
 def import_data():
-    with open("database.json", "r") as d:
+    with open("database.json", "r", encoding="utf-8") as d:
         data = json.load(d)
     return data
 
@@ -64,9 +64,9 @@ def items_by_cat(cat, data):
             cat_items.append(item)
     return cat_items
 
-def get_item_from_data(name, data):
+def get_item_from_data(id, data):
     for item in data:
-        if item["name"] == name:
+        if item["id"] == id:
             return item
 
 if __name__ == '__main__':
