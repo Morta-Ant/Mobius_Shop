@@ -2,16 +2,48 @@
 {% block title %}{{name}}{% endblock %}
 {% block head %}
   {{ super() }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 {% endblock %}
+
+{% block style %}
+  <style>
+    .buy {
+      color:yellow;
+      background-color: red;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin-bottom: 20px;
+      font-family: 'Roboto Mono', monospace;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
     <h3>{{name}}</h3>
-    <img src="{{url_for('static', filename = images[0]) }}" class = "image"/>
-    <img src="{{url_for('static', filename = images[1]) }}" class = "image"/>
-    <p>
-      {{price}}
-    </p>
-    <button type="button">Buy</button>
-    <p> 
-      {{desc}}
-    </p>>
+ 
+     <p> 
+       {{desc}} <br>
+     </p>>
+
+     <p>
+      £ {{price}} 
+     </p>
+ 
+     <button type="button" class = "buy">Buy</button>
+    
+    <div>
+      {% for image in images %}
+      <a href="{{url_for('static', filename=image)}}" data-fancybox="gallery">
+        <img src="{{url_for('static', filename=image)}}" width="250" height="250" class="image"/>
+      </a>>
+      {% endfor %}  
+    </div>
+    
 {% endblock %}

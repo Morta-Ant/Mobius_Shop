@@ -1,8 +1,62 @@
 [
-    {"name":"item1", "price": 0.01, "category":"cat1", "desc":"item description", "images":["image1a.png", "image1b.png"], "stock":1},
-    {"name":"item2", "price": 0.01, "category":"cat1", "desc":"item description", "images":["image2a.png", "image2b.png"], "stock":1},
-    {"name":"item3", "price": 0.01, "category":"cat2", "desc":"item description", "images":["image3a.png", "image3b.png"], "stock":1},
-    {"name":"item4", "price": 0.01, "category":"cat2", "desc":"item description", "images":["image4a.png", "image4b.png"], "stock":1},
-    {"name":"item5", "price": 0.01, "category":"cat3", "desc":"item description", "images":["image5a.png", "image5b.png"], "stock":1},
-    {"name":"item6", "price": 0.01, "category":"cat3", "desc":"item description", "images":["image6a.png", "image6b.png"], "stock":1}
+    {
+        "id": "zine_4",
+        "name":"Schrödinger Zine Issue #4", 
+        "price": 3.00, 
+        "category":"Zines", 
+        "desc":"Autumn issue of Schrödinger. Featuring work by Peter Nagy, Constantine Zeus, Emily-Rose James, Eugene Nezsivij/Highshifting, Kernius Linkevičius, Anton Hudo, Sygis, eveline, Dominyka Sekonaitė.",
+        "images":["Zine_4_a.png", "Zine_4_b.png", "Zine_4_c.png", "Zine_4_d.png"], 
+        "stock":9
+    },
+
+    {
+        "id": "zine_5",
+        "name":"Schrödinger Zine Issue #5", 
+        "price": 5.00, 
+        "category":"Zines", 
+        "desc":"Schrödinger is an independent collaborative zine aiming to connect people from different backgrounds.", 
+        "images":["Zine_5_a.png", "Zine_5_b.png", "Zine_5_c.png", "Zine_5_d.png"], 
+        "stock":26
+    },
+
+    {
+        "id": "zine_6",
+        "name":"Möbius Zine Issue #6", 
+        "price": 5.00, 
+        "category":"Zines", 
+        "desc":"Möbius is an independent collaborative zine aiming to connect people from different backgrounds", 
+        "images":["Zine_6_a.png", "Zine_6_b.png", "Zine_6_c.png", "Zine_6_d.png"], 
+        "stock":29
+    },
+
+    {
+        "id": "zine_7",
+        "name":"Möbius Zine Issue #7", 
+        "price": 5.00, 
+        "category":"Zines", 
+        "desc":"Poems, stories and illustrations provided by @v.matakaite, @zuz7ka, @mon_baga, Aistis Milaknis, Sigitas Darnulis, and @letthemothunfold. Cover art by @v.matakaite", 
+        "images":["Zine_7_a.png"], 
+        "stock":40
+    },
+
+    {
+        "id": "stickers_1",
+        "name":"Sticker Packet (10 stickers)", 
+        "price": 5.00, 
+        "category":"Stickers", 
+        "desc":"Pack of 10", 
+        "images":["Stickers_1_a.png"], 
+        "stock":18
+    },
+
+    {
+        "id": "stickers_2",
+        "name":"Stickers (Single)", 
+        "price": 1.00, 
+        "category":"Stickers", 
+        "desc":"Please leave a note with the order saying which stickers you'd like. The selection (1-10) can be seen in the picture of this listing.", 
+        "images":["Stickers_2_a.png"], 
+        "stock":100
+    }
+
 ]
